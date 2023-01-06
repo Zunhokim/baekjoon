@@ -1,4 +1,4 @@
-#음계
+#음계 / Class 1+
 
 a = list(map(int, input().split()))
 

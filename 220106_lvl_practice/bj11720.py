@@ -1,4 +1,4 @@
-#숫자의 합
+#숫자의 합 / Class 1+
 import sys
 
 N = int(sys.stdin.readline())
