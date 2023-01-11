@@ -10,16 +10,19 @@ for i in range (N):
     tlist.append(text)
 
 for i in tlist:
-    if i[0] == '(':
-        if i[::-1][0] == ')':
-            count1 = i.count('(')
-            count2 = i.count(')')
+    count = 0
 
-            if count1 == count2:
-                print("YES")
-            else:
-                print("NO")
-        else:
-            print("NO")
-    else:
-        print("NO")
+    for j in range (len(i)):
+
+        if i[j] == '(':
+            count += 1
+        elif i[j] == ')':
+            count -= 1
+
+        if count < 0:
+            print('NO')
+            break
+    if count > 0:
+        print('NO')
+    elif count == 0:
+        print('YES')
